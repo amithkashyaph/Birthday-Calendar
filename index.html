@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Birthday Calendar</title>
+  </head>
+  <body>
+    <h1 class="header">Work Area</h1>
+    <div class="cal__day">
+      <div class="day--empty">
+        <h5>MON</h5>
+        <div class="day__person" id="monday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>TUE</h5>
+        <div class="day__person" id="tuesday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>WED</h5>
+        <div class="day__person" id="wednesday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>THU</h5>
+        <div class="day__person" id="thursday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>FRI</h5>
+        <div class="day__person" id="friday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>SAT</h5>
+        <div class="day__person" id="saturday"></div>
+      </div>
+      <div class="day--empty">
+        <h5>SUN</h5>
+        <div class="day__person" id="sunday"></div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <textarea rows="30"></textarea>
+
+      <div class="year-input">
+        <label>Year</label>
+        <input type="number" min="1900" max="2099" value="2019" name="year" />
+        <button class="btn-primary">UPDATE</button>
+      </div>
+    </div>
+    <div class="error"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

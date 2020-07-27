@@ -1,0 +1,222 @@
+:root {
+  --grid-cols: 1;
+  --day-card-height: 13rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(179, 198, 200);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+  color: rgb(83, 83, 83);
+}
+
+.cal__day {
+  display: grid;
+  grid-template-columns: repeat(7, 13rem);
+  grid-gap: 1.5rem;
+  margin: 2rem;
+}
+
+.day--empty {
+  background: white;
+  border-radius: 5px;
+}
+
+.day--empty h5 {
+  text-align: right;
+  padding: 1rem;
+  display: block;
+  background: rgb(144, 144, 250);
+  color: white;
+  font-size: 1rem;
+}
+.input-area {
+  display: flex;
+  flex-direction: row;
+}
+textarea {
+  margin: 20px 30px;
+  width: 60%;
+}
+
+.year-input {
+  width: 40%;
+}
+
+.year-input label {
+  display: block;
+  margin: 20px 50px;
+  width: 70%;
+  text-align: left;
+  font-size: x-large;
+  color: rgb(83, 83, 83);
+}
+
+.year-input input {
+  border: 0;
+  display: block;
+  padding: 20px 50px;
+  margin: 30px 50px;
+  width: 70%;
+  text-align: center;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px 50px;
+  position: relative;
+  width: auto;
+  text-align: center;
+  background: rgb(82, 82, 202);
+  font-size: 115%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: rgb(53, 53, 167);
+}
+
+/* .btn-primary h5 {
+  font-size: 1em;
+  margin: auto;
+  text-align: center;
+} */
+
+.day__person {
+  height: var(--day-card-height);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), auto);
+  grid-template-rows: repeat(var(--grid-cols), 1fr);
+}
+
+.birthday {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-card {
+  background: lightgrey;
+  text-align: center;
+  vertical-align: middle;
+  color: darkgrey;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: red;
+  margin-left: 2rem;
+}
+
+.initials {
+  font-size: 1em;
+}
+
+.year-input h5 {
+  font-size: 100%;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .cal__day {
+    grid-template-columns: repeat(1, auto);
+    width: 50%;
+    margin: 0 auto;
+    /* margin: 0rem 0.6rem 1rem 6rem; */
+  }
+
+  .input-area {
+    display: block;
+  }
+
+  textarea {
+    display: block;
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  .input-area label {
+    display: block;
+    width: 140%;
+    margin: 1.5rem 0rem 0rem 1.4rem;
+  }
+
+  .input-area input {
+    display: block;
+    width: 170%;
+    margin: 1rem 0rem 1rem 1.4rem;
+  }
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left: 1.4rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+  .cal__day {
+    grid-template-columns: repeat(2, 13rem);
+    margin: 1rem 0.6rem 1rem 1.4rem;
+  }
+
+  .input-area {
+    display: block;
+  }
+
+  textarea {
+    margin: 1.4rem;
+    width: 70%;
+  }
+
+  .input-area label {
+    display: block;
+    width: 140%;
+    margin: 1.5rem 0rem 0rem 1.4rem;
+  }
+
+  .input-area input {
+    display: block;
+    width: 170%;
+    margin: 1rem 0rem 1rem 1.4rem;
+  }
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left: 1.4rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .cal__day {
+    grid-template-columns: repeat(3, 13rem);
+    grid-column-gap: 2rem;
+    margin: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .cal__day {
+    grid-template-columns: repeat(4, 13rem);
+    grid-gap: 2.5rem;
+  }
+}
